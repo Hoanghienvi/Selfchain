@@ -1,28 +1,31 @@
-# Selfchain.xyz
+# Selfchain node
 
 ### 1.Update system
 ```
 sudo apt update
-```
-
-```
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
 ```
 
 ### 2.Install Go
 ```
-rm -rf $HOME/go
-sudo rm -rf /usr/local/go
-cd $HOME
-curl https://dl.google.com/go/go1.20.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
-cat <<'EOF' >>$HOME/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export GO111MODULE=on
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source $HOME/.profile
-go version
+sudo apt install golang  
+sudo apt-get update  
+sudo apt-get -y upgrade  
+
+wget  https://go.dev/dl/go1.20.5.linux-amd64.tar.gz 
+
+sudo tar -xvf go1.20.5.linux-amd64.tar.gz   
+rm -rf /usr/local/go
+sudo mv go /usr/local  
+
+export GOROOT=/usr/local/go 
+
+export GOPATH=$HOME/Projects/Proj1 
+
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH 
+
+go version 
+
 ```
 ### 3.Install node
 
