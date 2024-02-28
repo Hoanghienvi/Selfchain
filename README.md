@@ -34,7 +34,7 @@ cd $HOME
 mkdir -p /root/go/bin/
 ```
 ```
-wget https://ss-t.self.nodestake.top/selfchaind
+wget [https://ss-t.self.nodestake.top/selfchaind](https://github.com/Hoanghienvi/Selfchain/releases/download/seftchain/selfchaind-linux-amd64)
 ```
 ```
 chmod +x selfchaind
